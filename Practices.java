@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Practices{
+public class practices{
     public static void main(String[] args){
         Scanner input= new Scanner(System.in);
 
-        int day= input.nextInt();
+        /***int day= input.nextInt();
         
             if(day==1){
             System.out.println("day is: Sunday");
@@ -29,7 +29,15 @@ public class Practices{
             }
             else{
                 System.out.println("Invalid input");
-            }
-        
+            } **/
+			
+			int sum=0;
+			System.out.println("enter number(-1 to stop)");
+			int number= input.nextInt();
+			while(number !=-1){
+				sum=sum+number;
+				number=input.nextInt();
+			}
+        System.out.println(sum);
     }
 }
