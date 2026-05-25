@@ -31,13 +31,33 @@ public class practices{
                 System.out.println("Invalid input");
             } **/
 			
-			int sum=0;
+			/*** int sum=0;
 			System.out.println("enter number(-1 to stop)");
 			int number= input.nextInt();
 			while(number !=-1){
 				sum=sum+number;
 				number=input.nextInt();
 			}
-        System.out.println(sum);
+        System.out.println(sum); **/
+		
+		
+			
+
+			/*** for (int row = 1; row <= 8; row++) {
+
+            // If row is even, start with a space
+            if (row % 2 == 0) {
+                System.out.print(" ");
+            }
+
+            for (int col = 1; col <= 8; col++) {
+                System.out.print("* ");
+            }
+
+            System.out.println();
+        } **/
+    
+
+
     }
 }
