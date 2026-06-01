@@ -1,9 +1,64 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
-public class practices{
+public class Practices{
     public static void main(String[] args){
         Scanner input= new Scanner(System.in);
-
+		ArrayList<Integer> digits= new ArrayList<>();
+		
+		//get encrympted code
+		System.out.println("Enter Encrypted Code");
+		String encCode= input.nextLine();
+		
+		//split code
+		for(int i=0; i<encCode.length(); i++){
+			digits.add(i, encCode.charAt(i)-'0');
+		}
+		
+		//swap code
+		for(int i=0; i<digits.size()-1; i+=2){
+			int temp= digits.get(i);
+			digits.set(i, digits.get(i+1));
+			digits.set(i+1, temp);
+		}
+		
+		//decrypt code
+		for(int i=0; i<digits.size(); i++){
+			digits.set(i, (digits.get(i)+10-7)%10);
+		}
+		
+		for(int i:digits){
+			System.out.print(i);
+		}
+		
+		//get code from user
+		/***
+		System.out.println("Enter Code");
+		String code= input.nextLine();
+		
+		//split code
+		for(int i=0; i<code.length(); i++){
+			digits.add(code.charAt(i)-'0');
+		}
+		
+		//swap code
+		for(int i=0; i<digits.size()-1; i+=2){
+			int temp= digits.get(i);
+			digits.set(i, digits.get(i+1));
+			digits.set(i+1, temp);
+		}
+		
+		//encrypt code
+		for(int i=0; i<digits.size(); i++){
+			int temp=(digits.get(i)+7)%10;
+			digits.set(i, temp);
+		}
+		
+		//print code
+		for(int i:digits){
+			System.out.print(i);
+		}
+**/
         /***int day= input.nextInt();
         
             if(day==1){
@@ -61,3 +116,5 @@ public class practices{
 
     }
 }
+
+
