@@ -13,25 +13,27 @@ public class NumberCalculation {
         Scanner input = new Scanner(System.in);
 
         ArrayList<Integer> numbers = new ArrayList<>();
-//accept 10numbers
+		
+		//accept 10numbers
         System.out.println("Enter 10 numbers:");
 
         for (int i = 0; i < 10; i++) {
             numbers.add(input.nextInt());
         }
-//find the sum of the 1st 5th and 10th number
+		
+		//find the sum of the 1st 5th and 10th number
         int sum1 = numbers.get(0) + numbers.get(4) + numbers.get(9);
 
-//sum of the 3rd, 8th and 2nd number
+		//sum of the 3rd, 8th and 2nd number
         int sum2 = numbers.get(2) + numbers.get(7) + numbers.get(1);
 		
-//multiply sum1 by the sum of the 3rd, 8th and 2nd number(sum2)
+		//multiply sum1 by the sum of the 3rd, 8th and 2nd number(sum2)
         int multiplication = sum1 * sum2;
 
-//sum of the 4th 7th 6th and 9th number
+		//sum of the 4th 7th 6th and 9th number
         int sum3 = numbers.get(3) + numbers.get(6) + numbers.get(5) + numbers.get(8);
 
-//substract multiplied sums(sum1 times sum2) from sum3
+		//substract multiplied sums(sum1 times sum2) from sum3
         int result = sum3 - multiplication;
 
         System.out.println("Result = " + result);
